@@ -8,6 +8,32 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+// function chunk(allStudents, sizeOfTeam) {
+//   const team = [];
+//   for (let student of allStudents) {
+//     const mostRecentPick = team[team.length - 1];
+
+//     if (!mostRecentPick || mostRecentPick.length === sizeOfTeam) {
+//       team.push([student]);
+//     } else {
+//       mostRecentPick.push(student);
+//     }
+//   }
+
+//   return team;
+// }
+
+function chunk(array, chunkSize){
+  someChunk = [];
+  index = 0;
+  
+  while (index < array.length) {
+    someChunk.push(array.slice(index, index + chunkSize))
+    index += chunkSize;
+  }
+  
+  return someChunk
+}
+
 
 module.exports = chunk;
