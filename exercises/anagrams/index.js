@@ -39,6 +39,12 @@ function anagrams(facialRecognitionCaptureA, facialRecognitionCaptureB) {
   
 }
 
+
+// GROUP ANAGRAMS
+
+
+
+
 // function anagrams(str1, str2) {
 //   const cleaner = (str) => {
 //     return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
