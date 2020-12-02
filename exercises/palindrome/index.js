@@ -32,12 +32,12 @@
 // NEW PALINDROME CHECKER USING TWO POINTER APPROACH AS OF 12.2
 
 function palindrome(str) {
-  let strToArray = str.split(''),
+  //let strToArray = str.split(''),
     left = 0,
-    right = strToArray.length - 1
+    right = str.length - 1
 
     while (left < right) {
-      if (strToArray[left] != strToArray[right]) {
+      if (str[left] != str[right]) {
         return false
       } else {
         left++;
