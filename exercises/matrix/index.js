@@ -15,6 +15,25 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n) {}
+function matrix(n) {
+  const valuesToAdd = n * n
+  startRow = 0 
+  endRow = n - 1
+  startColumn = 0
+  endColumn = n - 1
+
+  totalCounter = 1
+  resultArray = []
+
+  for (let i = 0; i < n; i++) {
+    results.push []
+  }
+
+  while ((startColumn <= endColumn) && (startRow <= endRow)) {
+    startColumn++
+  }
+
+
+}
 
 module.exports = matrix;
