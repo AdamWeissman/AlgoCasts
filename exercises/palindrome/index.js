@@ -22,10 +22,29 @@
 //   return str === rev_str
 // }
 
+// function palindrome(str) {
+//   return str.split('').every((char, i) => {
+//     return char === str[str.length - i - 1]
+//   });
+// }
+
+
+// NEW PALINDROME CHECKER USING TWO POINTER APPROACH AS OF 12.2
+
 function palindrome(str) {
-  return str.split('').every((char, i) => {
-    return char === str[str.length - i - 1]
-  });
+  let strToArray = str.split(''),
+    left = 0,
+    right = strToArray.length - 1
+
+    while (left < right) {
+      if (strToArray[left] != strToArray[right]) {
+        return false
+      } else {
+        left++;
+        right--;
+      }
+    }
+    return true
 }
 
 
