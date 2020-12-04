@@ -16,8 +16,16 @@
 
 
 function reverseInt(n) {
-  let tempIntString = n.toString().split('')
-  console.log(tempIntString)
+  const reversed = n
+    .toString()
+    .split('')
+    .reverse('')
+    .join('')
+  
+  if (n < 0) { // if n is negative 1, then it is multiplied by -1 and becomes postiive
+    return parseInt(reversed) * Math.sign(n)
+  }
+  return parseInt(reversed) 
 }
 
 
