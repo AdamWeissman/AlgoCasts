@@ -30,10 +30,22 @@ function maxChar(str) {
   let frequencyHash = {}
   let arr = str.split('')
   for (val of arr) {
-    frequencyHash[val] += 1
+    frequencyHash[val] = frequencyHash[val] + 1 || 1
   }
+
+  maxKey = null
+  maxValue = null
+
+  for (const [key, val] of Object.entries(frequencyHash)) {
+    console.log({key, val})
+    maxValue = Math.max(maxValue, val)
+    if (val == maxValue) {
+      maxKey = key
+    }
+  }
+
+  return maxKey
+
 }
-
-
 
 module.exports = maxChar;
