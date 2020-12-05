@@ -23,17 +23,19 @@
 //   return team;
 // }
 
-function chunk(array, chunkSize){
-  someChunk = [];
-  index = 0;
+// function chunk(array, chunkSize){
+//   someChunk = [];
+//   index = 0;
   
-  while (index < array.length) {
-    someChunk.push(array.slice(index, index + chunkSize))
-    index += chunkSize;
-  }
+//   while (index < array.length) {
+//     someChunk.push(array.slice(index, index + chunkSize))
+//     index += chunkSize;
+//   }
   
-  return someChunk
-}
+//   return someChunk
+// }
+
+// OLD ARRAY CHUNKING METHODS ABOVE ... NEW BELOW
 
 
 module.exports = chunk;
