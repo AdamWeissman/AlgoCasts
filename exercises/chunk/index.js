@@ -52,7 +52,14 @@ function chunk(array, n) {
   let tempArray = []
   for (let rightSliderClamp = 0; rightSliderClamp <= array.length; rightSliderClamp++){ // <= array.length to capture last element
     if (tempArray.length == n || rightSliderClamp == array.length ) {
-      chunkedArrays.push(tempArray.slice()) // NEED to use slice, otherwise it returns latest value of tempArray for everything
+      //chunkedArrays.push(tempArray.slice()) // NEED to use slice, otherwise it returns latest value of tempArray for everything... alternate approaches below
+      
+      // the following ALSO work...
+      
+      //chunkedArrays.push([].concat(tempArray))
+      chunkedArrays.push([...tempArray])
+
+      
       tempArray.length = 0
     }
     tempArray.push(array[rightSliderClamp])
